@@ -19,37 +19,6 @@ function logger($content)
     }
 }
 
-function sendSlackMessage($message, $title = "CA Notification", $icon_emoji = null)
-{
-    try {
-        $slack_webHook = "https://hooks.slack.com/services/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";
-        $client = new Client([
-            'base_url' => $slack_webHook,
-        ]);
-
-        $payload = json_encode(
-            [
-                'channel' => null,
-                'username' => null,
-                'icon_emoji' => ":smile:",
-                "attachments" => [
-                    (object)[
-                        "title" => $title ,
-                        "fallback" => "CA Notification",
-                        "color" => "#2eb886",
-                        "text" => $message,
-                    ]
-                ]
-            ]
-        );
-        $response = $client->post($slack_webHook, ['body' => $payload]);
-        return $response;
-    } catch (Exception $ex) {
-        logger($ex);
-    }
-    return "";
-}
-
 function mysqlResultToCollection($fetchedAssoc)
 {
     $rows = [];
