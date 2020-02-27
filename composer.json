@@ -1,0 +1,24 @@
+{
+    "name": "trailanalytics/cahelpers",
+    "description": "Credit Analytics Helper",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TrailAnalytics Dev",
+            "email": "info@trailanalytics.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "6.5.2",
+        "tightenco/collect": "^6.17",
+      "ext-json": "*",
+      "ext-mysqli": "*"
+    },
+  "autoload": {
+    "files": [
+      "helpers.php"
+    ]
+  }
+}
