@@ -19,12 +19,14 @@ function logger($content)
     }
 }
 
+
 function mysqlResultToCollection($fetchedAssoc)
 {
     $rows = [];
-    while($row = $fetchedAssoc)
+    while($row = $fetchedAssoc->fetch_assoc())
     {
         $rows[] = $row;
     }
-    dd($rows);
+
+    return collect($rows);
 }
