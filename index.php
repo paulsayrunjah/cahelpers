@@ -1,6 +1,8 @@
 <?php
 require_once "./vendor/autoload.php";
 
-mysqlResultToCollection([]);
-dd(collect(["Hello", "Name"]));
+dump("Hello");
+dd(array("pauuz", "sayrunaj"));
+dump("Hey");
+
 

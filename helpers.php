@@ -1,6 +1,5 @@
 <?php
 
-use GuzzleHttp\Client;
 
 function logger($content)
 {
@@ -17,6 +16,13 @@ function logger($content)
     }catch (Exception $exception) {
 
     }
+}
+
+
+function dd($content)
+{
+    dump($content);
+    exit();
 }
 
 

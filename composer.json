@@ -11,10 +11,11 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "guzzlehttp/guzzle": "6.5.2",
-        "tightenco/collect": "^6.17",
+      "php": ">=5.5.9",
+        "tightenco/collect": "5.2.31",
       "ext-json": "*",
-      "ext-mysqli": "*"
+      "ext-mysqli": "*",
+        "symfony/var-dumper": "3.4.38"
     },
   "autoload": {
     "files": [
